@@ -1,6 +1,6 @@
 import socket
 import threading
-import sys  # Missing import fixed
+import sys  
 
 HOST = '10.1.174.213'
 PORT = 12345
@@ -28,7 +28,7 @@ def send_messages(conn):
             sys.stdout.write("Server: ")  
             sys.stdout.flush()
             
-            message = input()  # Taking input after printing prompt
+            message = input() 
             if message.lower() == "exit":
                 print("Closing connection...")
                 conn.sendall("exit".encode('utf-8'))
@@ -53,7 +53,7 @@ def receive_messages(conn):
             print(f"\nEncrypted Received: {data}")  
             print(f"Client (Decrypted): {decrypted_data}")  
 
-            sys.stdout.write("Server: ")  # Print Server prompt after receiving message
+            sys.stdout.write("Server: ")  
             sys.stdout.flush()
     except:
         print("Connection closed by client.")
@@ -79,6 +79,6 @@ try:
 except:
     print("Error occurred.")
 finally:
-    conn.close()  # Close connection only once
+    conn.close()  
     server_socket.close()
     print("Server closed.")

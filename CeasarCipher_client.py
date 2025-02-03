@@ -53,12 +53,11 @@ def receive_messages(client_socket):
             print(f"\nEncrypted Received: {data}")  
             print(f"Server (Decrypted): {decrypted_data}")  
 
-            sys.stdout.write("Client: ")  # Print Client prompt after receiving message
+            sys.stdout.write("Client: ")  
             sys.stdout.flush()
     except:
         print("Connection closed by server.")
 
-# Connect to the server
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((HOST, PORT))
 print(f"Connected to server at {HOST}:{PORT}")
