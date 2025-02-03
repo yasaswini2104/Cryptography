@@ -7,7 +7,7 @@ from Crypto.Util.Padding import pad, unpad
 
 from Crypto.Random import get_random_bytes
 
-SERVER_IP = '10.1.35.169'
+SERVER_IP = '192.168.31.47'
 PORT = 12345
 
 KEY = b'SixteenByteKey!!SixteenByteKey!!' 
