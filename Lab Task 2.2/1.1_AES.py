@@ -30,6 +30,8 @@ def decrypt_file(input_file: str, output_file: str, password: str):
     
     with open(input_file, 'rb') as f:
         file_data = f.read()
+
+    
     
     iv, ciphertext=file_data[:16], file_data[16:]
     cipher=AES.new(key, AES.MODE_CBC, iv)
